@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/toadboi/Scenes/Main Menu.unity
+    guid: fcff5e832d5845c4880a9a418a96975d
+  - enabled: 1
+    path: Assets/Scenes/toadboi/Scenes/GameScene.unity
+    guid: bb58a8deefd45c74bad7e4c0c87a0bd5
+  - enabled: 1
+    path: Assets/Scenes/toadboi/Scenes/Game Over.unity
+    guid: 4b0dd437c6d756a48978091b882b415f
   m_configObjects: {}
