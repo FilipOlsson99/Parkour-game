@@ -692,6 +692,44 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &431043316 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1244298784380415788, guid: c965d5fefc9d46f41ab6af538ebced94, type: 3}
+  m_PrefabInstance: {fileID: 1244298783765237864}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &431043317 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1244298784380415777, guid: c965d5fefc9d46f41ab6af538ebced94, type: 3}
+  m_PrefabInstance: {fileID: 1244298783765237864}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &431043322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 431043316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e578e7852391adc4aaf47139ef897d6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 1376604664}
+  danger: {fileID: 431043316}
+  anim: {fileID: 1376604665}
+  animwall: {fileID: 431043317}
+--- !u!114 &431043323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 431043316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dd62cf28cf92d0488423fce1bf4f362, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &497355271
 GameObject:
   m_ObjectHideFlags: 0
@@ -801,7 +839,7 @@ GameObject:
   - component: {fileID: 592872907}
   - component: {fileID: 592872906}
   - component: {fileID: 592872905}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Cube (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1249,8 +1287,8 @@ GameObject:
   - component: {fileID: 725898600}
   - component: {fileID: 725898599}
   m_Layer: 0
-  m_Name: Capsule
-  m_TagString: Untagged
+  m_Name: Player
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1288,6 +1326,7 @@ MonoBehaviour:
   controller: {fileID: 725898599}
   speed: 12
   gravity: -29.43
+  JumpHeight: 3
   GroundCheck: {fileID: 1511167050}
   groundDistance: 0.4
   groundMask:
@@ -2403,6 +2442,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 9ea404fd2f23e494e86e208e4fc91180, type: 2}
+    - target: {fileID: -4780072770720950627, guid: b5b466f008c38814c94f47105b6e7a90, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9ea404fd2f23e494e86e208e4fc91180, type: 2}
+    - target: {fileID: -3240084944888637655, guid: b5b466f008c38814c94f47105b6e7a90, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3240084944888637655, guid: b5b466f008c38814c94f47105b6e7a90, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3240084944888637655, guid: b5b466f008c38814c94f47105b6e7a90, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: b5b466f008c38814c94f47105b6e7a90, type: 3}
       propertyPath: m_Name
       value: starting plat
@@ -2419,8 +2474,69 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
+    - target: {fileID: 2040542448765327740, guid: b5b466f008c38814c94f47105b6e7a90, type: 3}
+      propertyPath: m_Name
+      value: Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 4253280567622488715, guid: b5b466f008c38814c94f47105b6e7a90, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: daf8f98af3263ab499c4156965018d95, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5b466f008c38814c94f47105b6e7a90, type: 3}
+--- !u!1 &1376604664 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2040542448765327740, guid: b5b466f008c38814c94f47105b6e7a90, type: 3}
+  m_PrefabInstance: {fileID: 1376604663}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1376604665
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376604664}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 32437b617f4338a4fac9d922f92fd09f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &1376604666
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376604664}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 9.467476, y: 7.9083223, z: 43.29827}
+  m_Center: {x: 1.7417717, y: 3.6393485, z: 16.173994}
+--- !u!114 &1376604670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1376604664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e578e7852391adc4aaf47139ef897d6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 1376604664}
+  danger: {fileID: 431043316}
+  anim: {fileID: 1376604665}
+  animwall: {fileID: 431043317}
 --- !u!1 &1511167049
 GameObject:
   m_ObjectHideFlags: 0
@@ -2940,9 +3056,9 @@ GameObject:
   - component: {fileID: 2041940986}
   - component: {fileID: 2041940985}
   - component: {fileID: 2041940984}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: Cube (9)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3286,9 +3402,17 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1244298784380415777, guid: c965d5fefc9d46f41ab6af538ebced94, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 6a80c85b381f6524c805a861c6c0987b, type: 2}
     - target: {fileID: 1244298784380415788, guid: c965d5fefc9d46f41ab6af538ebced94, type: 3}
       propertyPath: m_Name
       value: Danger
+      objectReference: {fileID: 0}
+    - target: {fileID: 1244298784380415788, guid: c965d5fefc9d46f41ab6af538ebced94, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2024107303981825597, guid: c965d5fefc9d46f41ab6af538ebced94, type: 3}
       propertyPath: m_RenderMode
